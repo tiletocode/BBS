@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>게시판 prototype v1</title>
+    <meta charset="UTF-8">
+        <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<main class="main">
+    <div class="search-form margin-top first align-right">
+        <h3 class="hidden">공지사항 검색폼</h3>
+        <form class="table-form">
+            <fieldset>
+                <legend class="hidden">공지사항 검색 필드</legend>
+                <label class="hidden">검색분류</label>
+                <select name="f">
+                    <option value="title">제목</option>
+                    <option value="writerId">작성자</option>
+                </select>
+                <label class="hidden">검색어</label>
+                <input type="text" name="q" value=""/>
+                <input class="btn btn-search" type="submit" value="검색"/>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="notice margin-top">
+        <h3 class="hidden">공지사항 목록</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="w60">번호</th>
+                <th class="expand">제목</th>
+                <th class="w100">작성자</th>
+                <th class="w100">작성일</th>
+                <th class="w60">조회수</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td>1028</td>
+                <td class="title indent text-align-left"><a href="1028">7월 19일 오픈하는 뉴렉처 1기 과정을 모집합니다.</a></td>
+                <td>newlec</td>
+                <td>
+                    2021-05-31
+                </td>
+                <td>6668</td>
+            </tr>
+
+            <tr>
+                <td>1027</td>
+                <td class="title indent text-align-left"><a href="1027">7월달 온라인 강의 예정 안내</a></td>
+                <td>newlec</td>
+                <td>
+                    2021-05-23
+                </td>
+                <td>1980</td>
+            </tr>
+
+            <tr>
+                <td>1026</td>
+                <td class="title indent text-align-left"><a href="1026">스프링 MVC 공지사항 관리자 view 페이지</a></td>
+                <td>newlec</td>
+                <td>
+                    2020-12-30
+                </td>
+                <td>5364</td>
+            </tr>
+
+            <tr>
+                <td>1024</td>
+                <td class="title indent text-align-left"><a href="1024">스프링 MVC 소스코드</a></td>
+                <td>newlec</td>
+                <td>
+                    2020-12-12
+                </td>
+                <td>4120</td>
+            </tr>
+
+            <tr>
+                <td>1023</td>
+                <td class="title indent text-align-left"><a href="1023">스프링 JSON 출력을 위한 라이브러리 설정</a></td>
+                <td>newlec</td>
+                <td>
+                    2020-11-29
+                </td>
+                <td>2994</td>
+            </tr>
+
+            <tr>
+                <td>1022</td>
+                <td class="title indent text-align-left"><a href="1022">스프링 강좌 RestController 한글 깨짐 설정 코드</a></td>
+                <td>newlec</td>
+                <td>
+                    2020-11-25
+                </td>
+                <td>2243</td>
+            </tr>
+
+            <tr>
+                <td>1020</td>
+                <td class="title indent text-align-left"><a href="1020">스프링 강의 20강용 Notice 서비스 파일</a></td>
+                <td>newlec</td>
+                <td>
+                    2020-11-06
+                </td>
+                <td>3676</td>
+            </tr>
+
+            <tr>
+                <td>1016</td>
+                <td class="title indent text-align-left"><a href="1016">Tiles ViewResolver 설정 내용</a></td>
+                <td>newlec</td>
+                <td>
+                    2020-10-22
+                </td>
+                <td>2220</td>
+            </tr>
+
+            <tr>
+                <td>16</td>
+                <td class="title indent text-align-left"><a href="16">html.zip 파일 (스프링 웹 MVC 강의용)</a></td>
+                <td>newlec</td>
+                <td>
+                    2020-10-12
+                </td>
+                <td>3383</td>
+            </tr>
+
+            <tr>
+                <td>14</td>
+                <td class="title indent text-align-left"><a href="14">전기 점검이 있을 예정입니다.</a></td>
+                <td>newlec</td>
+                <td>
+                    2020-06-15
+                </td>
+                <td>1786</td>
+            </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="indexer margin-top align-right">
+        <h3 class="hidden">현재 페이지</h3>
+        <div><span class="text-orange text-strong">1</span> / 2 pages</div>
+    </div>
+
+    <div class="margin-top align-center pager">
+
+
+        <div>
+
+
+            <span class="btn btn-prev" onclick="alert('이전 페이지가 없습니다.');">이전</span>
+
+        </div>
+        <ul class="-list- center">
+
+
+            <li><a class="-text- orange bold" href="?p=1&t=&q=">1</a></li>
+
+
+            <li><a href="?p=2&t=&q=">2</a></li>
+
+
+        </ul>
+        <div>
+
+
+            <span class="btn btn-next" onclick="alert('다음 페이지가 없습니다.');">다음</span>
+
+        </div>
+
+    </div>
+</main>
+
+
+</div>
+</div>
+
+</body>
+
+</html>
