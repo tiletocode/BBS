@@ -3,18 +3,19 @@ package com.tiletocode.bbs;
 import java.sql.Timestamp;
 
 public class BoardInfo {
-    private int number;
+    private int n;
     private String title;
     private String id;
     private Timestamp time;
-    private int pass;
+    private String pass;
+    private String content;
 
-    public int getNumber() {
-        return number;
+    public int getN() {
+        return n;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setN(int n) {
+        this.n = n;
     }
 
     public String getTitle() {
@@ -41,11 +42,19 @@ public class BoardInfo {
         this.time = time;
     }
 
-    public int getPass() {
+    public String getPass() {
         return pass;
     }
 
-    public void setPass(int pass) {
+    public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
