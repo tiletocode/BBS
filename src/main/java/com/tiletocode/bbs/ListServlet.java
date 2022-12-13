@@ -47,6 +47,7 @@ public class ListServlet extends HttpServlet {
         } finally {
             request.setAttribute("err", err);
             request.getRequestDispatcher("/").forward(request, response);
+
         }
     }
 }

@@ -2,7 +2,7 @@
 <%@ page import="com.tiletocode.bbs.BoardInfo" %>
 
 <%
-    BoardInfo binfo = (BoardInfo) request.getAttribute("binfo");
+            BoardInfo binfo = (BoardInfo) request.getAttribute("binfo");
     String err = (String) request.getAttribute("err");
 %>
 <html>
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
 </head>
 <body>
+<form action="DeleteServlet">
 <div>
     <h3>작성글 내용</h3>
     <table class="table">
@@ -35,7 +36,14 @@
         </tr>
         </tbody>
     </table>
+    <input type="hidden" class="form-control" name="n" value="<%=binfo.getN()%>">
+    <%
+        request.setAttribute("n", binfo.getN());
+    %>
+    <a href="ListServlet" class="btn btn-primary pull-right">전체글</a>
+    <a href="modify.jsp" class="btn btn-primary pull-right">수정하기</a>
+    <input type="submit" class="btn btn-primary pull-right" value="삭제하기">
 </div>
-
+</form>
 </body>
 </html>

@@ -4,10 +4,10 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class BoardDao {
-    private static String RDB_DRIVE = "com.mysql.cj.jdbc.Driver";
-    private static String URL = "jdbc:mysql://ledx-1.c0puka4oucjv.ap-northeast-2.rds.amazonaws.com:3306/TEST";
-    private static String USER = "fiercegear";
-    private static String PASS = "ipaq2210";
+    private static String RDB_DRIVE = "org.mariadb.jdbc.Driver";
+    private static String URL = "jdbc:mariadb://158.247.198.153:3306/TEST";
+    private static String USER = "root";
+    private static String PASS = "quality";
 
     public static Connection getConnection() {
         try {

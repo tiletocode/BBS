@@ -11,8 +11,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-@WebServlet(name = "WriteServlet", value = "/WriteServlet")
-public class WriteServlet extends HttpServlet {
+@WebServlet(name = "DeleteServlet", value = "/DeleteServlet")
+public class DeleteServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -20,12 +20,9 @@ public class WriteServlet extends HttpServlet {
         throws ServletException, IOException {
 
         String err = "";
-        String title = request.getParameter("title");
-        String id = request.getParameter("id");
-        String pass = request.getParameter("pass");
-        String content = request.getParameter("content");
+        String num = request.getParameter("n");
 
-        String sql = "insert into bbs(title,id,pass,content) values('"+title+"', '"+id+"', '"+pass+"', '"+content+"')";
+        String sql = "delete from bbs where n = '"+num+"'";
         String driver = "org.mariadb.jdbc.Driver";
         String url = "jdbc:mariadb://158.247.198.153:3306/TEST";
         String uid = "root";
